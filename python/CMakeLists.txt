@@ -37,7 +37,7 @@ include_directories(
         ${NUMPY_INCLUDE_DIRS}
 )
 
-option(INSTALL_INTO_USER_SITE_PACKAGES_DIRECTORY "Install python modules into a per user site-packages directory" ON)
+option(INSTALL_INTO_USER_SITE_PACKAGES_DIRECTORY "Install python modules into a per user site-packages directory" OFF)
 
 if (INSTALL_INTO_USER_SITE_PACKAGES_DIRECTORY)
     execute_process(COMMAND ${PYTHON_EXECUTABLE}  -m site --user-site OUTPUT_VARIABLE PYTHON_SITE_PACKAGES OUTPUT_STRIP_TRAILING_WHITESPACE)
